@@ -339,5 +339,8 @@ you might NOT) want to use different key providers, etc.
 Good Luck
 #########
 
-This might seem complicated but it's already. Try it out and you'll see how it works.
-Keep your backup keys for Native Key Provider.
+This might seem complicated but it's not too bad. Try it out and you'll see how it 
+works. Keep your backup keys for Native Key Provider! And change the script to do
+what you want. Don't have to put up with my output, after all. :)
+
+- Bob
