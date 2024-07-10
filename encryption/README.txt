@@ -225,8 +225,8 @@ Host Caching of Keys
 
 ESXi caches the encryption keys for encrypted objects in its memory, to prevent
 issues if the key provider becomes unavailable. As such, you might not know
-you have an issue until you remove the old key provider and reboot a host. As
-such, it's important to have backups of key providers and connection information.
+you have an issue until you remove the old key provider and reboot a host. It's
+important to have backups of key providers and connection information.
 
 Sample Order of Operations for a Key Provider Change
 ####################################################
