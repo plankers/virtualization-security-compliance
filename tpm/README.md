@@ -90,6 +90,13 @@ NoSafetyChecks, which will omit the checks for versions, number of vCenters, etc
 
 The script does not change the environment and should be safe at all times.
 
+Problems
+========
+
+If the script doesn't detect PowerCLI when you know it is installed just comment it out,
+or use -NoSafetyChecks. Certain methods of installing PowerCLI do not appear to be "seen"
+by the Powershell module inventory.
+
 Entering a Recovery Key
 =======================
 
