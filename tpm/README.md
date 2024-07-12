@@ -1,6 +1,6 @@
-VMware vSphere/VCF TPM Recovery Key Backup Utility
-Copyright (C) 2024 Bob Plankers. All rights reserved.
-bob.plankers@broadcom.com or bob@plankers.com
+**VMware vSphere/VCF TPM Recovery Key Backup Utility**  
+Copyright (C) 2024 Bob Plankers. All rights reserved.  
+bob.plankers@broadcom.com or bob@plankers.com  
 
 License
 ===============	

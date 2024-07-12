@@ -1,6 +1,6 @@
-VMware vSphere/VCF Key Provider Audit & Change Examples
-Copyright (C) 2024 Bob Plankers. All rights reserved.
-bob.plankers@broadcom.com or bob@plankers.com
+**VMware vSphere/VCF Key Provider Audit & Change Examples**  
+Copyright (C) 2024 Bob Plankers. All rights reserved.  
+bob.plankers@broadcom.com or bob@plankers.com  
 
 License
 ===============	
