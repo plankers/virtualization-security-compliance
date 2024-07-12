@@ -2,7 +2,8 @@ VMware vSphere/VCF Key Provider Audit & Change Examples
 Copyright (C) 2024 Bob Plankers. All rights reserved.
 bob.plankers@broadcom.com or bob@plankers.com
 
-##############################################################################
+License
+===============	
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,7 +17,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-##############################################################################
+Disclaimer/EULA
+===============
 
 This software is provided as is and any express or implied warranties,
 including, but not limited to, the implied warranties of merchantability and
@@ -35,7 +37,8 @@ of requirements and effectiveness of implementations. You acknowledge that
 there may be performance or other considerations, and that this example may
 make assumptions which may not be valid in your environment or organization.
 
-##############################################################################
+Support
+===============
 
 This software is not supported, though the techniques it uses are supported by 
 Broadcom. While I am grateful for suggested improvements and I do enjoy
@@ -47,15 +50,14 @@ For that, look to official support channels. If you need more specific
 support ask Broadcom about Professional Services, who can shepherd an
 operation like this.
 
-##############################################################################
+Warning
+=======
 
 Make backups of all configurations and data before using this tool. Where
 prompted, monitor task progress directly in the vSphere Client.
 
-##############################################################################
-
 Introduction
-############
+============
 
 Data-at-rest encryption in VMware vSphere and Cloud Foundation can be enabled:
 
@@ -76,7 +78,7 @@ Data-at-rest encryption in VMware vSphere and Cloud Foundation can be enabled:
   outside the scope of discussion here.
 
 Types of Key Providers
-######################
+======================
 
 To enable data-at-rest encryption, you need to configure a key provider. A
 key provider does what its name suggests: provides encryption keys to the
@@ -112,7 +114,7 @@ If the provider is unique always give it a unique name. If it's shared, such as
 with a Standard Key Provider, always give it the same name.
 
 Types of Encryption Keys
-########################
+========================
 
 There are two keys associated with data-at-rest encryption:
 
@@ -128,7 +130,7 @@ protect it, it is encrypted with the KEK, where the KEK is stored with the key
 provider.
 
 Rekeying
-########
+========
 
 At times it is necessary to rotate keys:
 
@@ -158,7 +160,7 @@ At times it is necessary to rotate keys:
   do not notice.
 
 Changing Key Providers
-######################
+======================
 
 We can use the shallow rekey operation to change key providers, by instructing
 vSphere/VCF to get the new KEK from a different key provider. You can switch
@@ -187,7 +189,7 @@ sections to ensure the tasks complete. By that, it wants you to make sure they
 are complete, and then hit a key.
 
 Capturing Script Output
-#######################
+=======================
 
 These scripts do not emit fancy output (colored text and such) but that comes
 with the advantage that you can use the Powershell output redirection commands
@@ -201,7 +203,7 @@ desire CSV output or something. Excel is a powerful and overlooked sysadmin
 tool, after all.
 
 Default Key Providers
-#####################
+=====================
 
 Beginning in vSphere 8.0.1 individual clusters can define their own default key
 provider, versus having to respect the default that is defined at the vCenter
@@ -210,7 +212,7 @@ The change script will reset vCenter to use the provider you specify as the
 default, and remove any cluster-level customizations you might have. 
 
 Problems
-########
+========
 
 The process is resilient, so if it fails you can just start again. You can
 always rekey with the same provider you're already using. I probably rekeyed one
@@ -221,7 +223,7 @@ or remove that check. Certain methods of installing PowerCLI do not appear
 to be "seen" by the Powershell module inventory.
 
 Host Caching of Keys
-####################
+====================
 
 ESXi caches the encryption keys for encrypted objects in its memory, to prevent
 issues if the key provider becomes unavailable. As such, you might not know
@@ -229,7 +231,7 @@ you have an issue until you remove the old key provider and reboot a host. It's
 important to have backups of key providers and connection information.
 
 Sample Order of Operations for a Key Provider Change
-####################################################
+====================================================
 
 All environments are different, and you will need to audit this in the context of
 your own installation, but a sample order of operations for changing a key 
@@ -288,7 +290,7 @@ provider might be:
     decommissioning.
 
 Test Environments
-#################
+=================
 
 I cannot stress enough that even a simple test environment, such as a nested set
 vCenter and ESXi hosts, is very helpful for establishing familiarity with these
@@ -296,7 +298,7 @@ sorts of operations. Your production environment should never be the first place
 you're trying something.
 
 Decommissioning Key Providers
-#############################
+=============================
 
 One of the largest issues with making general recommendations about encryption
 is that only YOU know where encrypted copies of VMs are. For example, if you
@@ -326,7 +328,7 @@ It may still be worth checking with your backup provider and/or storage provider
 to ensure that there's nothing that would be affected when you do this operation.
 
 More Information
-################
+================
 
 I publish a lot of vSphere/VCF security material at:
 
@@ -337,10 +339,8 @@ would be relevant here. It also includes discussions on where you might (and whe
 you might NOT) want to use different key providers, etc.
 
 Good Luck
-#########
+=========
 
 This might seem complicated but it's not too bad. Try it out and you'll see how it 
 works. Keep your backup keys for Native Key Provider! And change the script to do
-what you want. Don't have to put up with my output, after all. :)
-
-- Bob
+what you want. Don't have to put up with my output, after all. :) -Bob
