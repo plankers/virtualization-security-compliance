@@ -1,11 +1,12 @@
-# virtualization-security-compliance
-Tools and Documentation to Support Security &amp; Compliance Efforts in VMware Virtualized Environments.
+Tools and Documentation to Support Security Efforts in Virtualized Environments
+=====================
 
-This repository is not supported, endorsed, encouraged, or wanted by VMware, Broadcom, or anything calling itself VMware by Broadcom. It uses interfaces and techniques that may be supported by the vendor directly. It is entirely for educational purposes, helping interested parties get things done. No support is offered. If you require support for things in this repository please reach out to partners, Broadcom Professional Services, or the like.
+This repository is not supported, endorsed, encouraged, or wanted by VMware, Broadcom, or anything calling itself VMware by Broadcom. It uses interfaces and techniques that may be supported by the vendor directly. It is entirely for educational purposes, helping interested parties get things done. If you require support for things in this repository please reach out to partners, Broadcom Professional Services, or the like.
 
-While I am grateful for suggested improvements and I do enjoy helping people, I am not an official support path, and I cannot respond in that manner. Thank you.
+This software is not supported. While I am grateful for suggested improvements and I do enjoy helping people, I am not an official support path, and I will not respond in that manner. I put this together because lots of people wanted an example of how to do it, but the responsibility is yours.
 
-# License
+License
+=======
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -19,7 +20,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-# Disclaimer
+Disclaimer
+==========
 
 This material is provided as is and any express or implied warranties,
 including, but not limited to, the implied warranties of merchantability and
