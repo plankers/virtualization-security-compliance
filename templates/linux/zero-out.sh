@@ -72,4 +72,3 @@ done
 
 # Clear the lock file
 /bin/rm /tmp/zero-out-running
-
