@@ -49,5 +49,17 @@
 # Ensure the guest cannot be further customized.
 # You'll want to set this to false on deployment, so that a malicious user can't redeploy a clone of a VM
 # and then re-customize the clone to give themselves admin access.
-/usr/bin/vmware-toolbox-cmd config set deployPkg enable-custom-scripts false
 /usr/bin/vmware-toolbox-cmd config set deployPkg enable-customization false
+/usr/bin/vmware-toolbox-cmd config set deployPkg enable-custom-scripts false
+/usr/bin/vmware-toolbox-cmd config set autoupgrade allow-add-feature false
+/usr/bin/vmware-toolbox-cmd config set autoupgrade allow-msi-transforms false
+/usr/bin/vmware-toolbox-cmd config set appinfo disabled true
+/usr/bin/vmware-toolbox-cmd config set containerinfo poll-interval 0
+/usr/bin/vmware-toolbox-cmd config set guestoperations disabled true
+/usr/bin/vmware-toolbox-cmd config set gueststoreupgrade policy off
+/usr/bin/vmware-toolbox-cmd config set servicediscovery disabled true
+/usr/bin/vmware-toolbox-cmd config set logging log true
+/usr/bin/vmware-toolbox-cmd config set logging vmsvc.handler syslog
+/usr/bin/vmware-toolbox-cmd config set globalconf enabled false
+/usr/bin/vmware-toolbox-cmd config set autoupgrade allow-remove-feature false
+/usr/bin/vmware-toolbox-cmd config set autoupgrade allow-upgrade true

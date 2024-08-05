@@ -170,5 +170,5 @@ unset HISTFILE
 # Ensure the guest can be customized with a script.
 # You'll want to set this to false again on deployment, so that a malicious user can't redeploy a clone of a VM
 # and then re-customize the clone to give themselves admin access.
-/usr/bin/vmware-toolbox-cmd config set deployPkg enable-custom-scripts true
 /usr/bin/vmware-toolbox-cmd config set deployPkg enable-customization true
+/usr/bin/vmware-toolbox-cmd config set deployPkg enable-custom-scripts true
