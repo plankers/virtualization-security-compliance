@@ -13,8 +13,8 @@
 # Delete the spurious old connection from the template
 # You can see the UUID from 'nmcli connection' on the template
 # You'll want to add the UUID from your template to the following commands (these are my UUIDs, likely different for you)
-/bin/nmcli connection delete f29727c7-88fe-34bc-b354-80dca9ecab23
-/bin/nmcli connection delete 87785c1f-309d-3b42-82df-4b1c7b8f85b6
+/bin/nmcli connection delete ens33 
+/bin/nmcli connection modify 'VMware customization ens33' connection.id "ens33"
 
 # Disable IPv6 if it isn't in use 
 /bin/nmcli connection modify ens33 ipv6.method "disabled"
